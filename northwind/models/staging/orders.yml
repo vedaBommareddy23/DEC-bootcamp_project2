@@ -1,0 +1,14 @@
+models:
+  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: employee_id
+        tests:
+          - not_null
+        

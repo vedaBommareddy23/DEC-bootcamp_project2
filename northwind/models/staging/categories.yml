@@ -1,0 +1,8 @@
+models:
+  - name: categories
+    columns:
+      - name: category_id
+        tests:
+          - not_null
+          - unique
+        
