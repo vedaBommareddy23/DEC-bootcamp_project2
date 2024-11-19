@@ -1,0 +1,17 @@
+northwind:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: nsbnpck-rub28302
+
+      # User/password auth
+      user: veda
+      password: Snowflake1323
+
+      role: accountadmin
+      database: northwind
+      warehouse: compute_wh
+      schema: raw
+      threads: 8
+      client_session_keep_alive: False

@@ -1,0 +1,11 @@
+models:
+  - name: products
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+      - name: unit_price
+        tests:
+          - column_greater_or_equal:
+              value: 0

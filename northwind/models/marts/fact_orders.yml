@@ -1,0 +1,7 @@
+models:
+  - name: fact_orders
+    columns:
+      - name: cost
+        tests:
+          - column_greater_or_equal:
+              value: 0
