@@ -90,5 +90,9 @@ The final snapshot after installing the norrthwind store db is as follows
 
 # PRESET
 
+image showing the data ingestion into preset and the metrics used
+
+![preset_Setup](<img/preset_setup.png>)
+
 ## DASHBOARD
 ![preset](<img/preset.png>)
