@@ -24,7 +24,10 @@ The end users would be analysts from the sales and marketing team who will need 
 |----------------------|-------------|-------------------------------------------|
 | Northwind Store  | Postgres SQL   | https://github.com/pthom/northwind_psql |
 
-To install the Northwind store in Postgresql read northwind_db_setup.md
+The ER diagram of the Northwind store and the instructions to install the Northwind store in Postgresql, please read northwind_db_setup.md
+
+The final snapshot after installing the norrthwind store db is as follows
+![postgres](<img/postgres.png>)
 
 ## Solution architecture
 
@@ -33,7 +36,7 @@ To install the Northwind store in Postgresql read northwind_db_setup.md
 3. DBT will be responsible DAG formation based on data formation
 4. Semantic modeling and visualization - tool Preset is used to visualize the data reports.
 
-![solution_architecture](</img/solution_architecture.png>)
+![solution_architecture](<img/solution_architecture.png>)
 
 
 ## STAR-SCHEMA
@@ -44,3 +47,48 @@ To install the Northwind store in Postgresql read northwind_db_setup.md
 4. marts.dim_employees: contains the details of the employees, employee_territories and employee_regions
 
 ![star_shema](<img/star_schema.png>).
+
+
+## Step-by-step instructions:
+
+1. To setup postgres please see 'northwind_db_setup.md' file.
+2. Setup Airbyte by following the images.
+
+### Setting up source:
+![airbyte1](<img/airbyte1.png>)
+![airbyte_source_setup2](<img/airbyte2.png>)
+
+### Setting Destination:
+![airbyte_destination_setup](<img/airbyte3.png>)
+![airbyte_destination_setup2](<img/airbyte5.png>) 
+
+### Setting up connection
+![airbyte_connection_setup](<img/airbyte7.png>)
+![airbyte_connection_schema](<img/airbyte5.png>)
+![airbyte_connection_status](<img/airbyte6.png>)
+
+
+
+# SNOWFLAKE SETUP
+
+## SETUP
+![snowflake_setup](<img/snowflake1.png>)
+
+## RAW 
+
+1. Ingested from Postgres via Airbyte
+
+![snowflake_raw](<img/snowflake_raw.png>)
+
+## STAGING AND SEED
+![snowflake_staging_seed](<img/snowflake_staging_seed.png>)
+
+## MARTS
+![snowflake_marts](<img/snowflake_marts.png>)
+
+
+
+# PRESET
+
+## DASHBOARD
+![preset](<img/preset.png>)
